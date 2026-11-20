@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="English Pathway 2.1 — plataforma de aprendizaje de inglés CEFR A1–C1 para estudiantes y docentes.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Pathway 2.1 | CEFR Learning Suite (A1–C1)</title>
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <div class="logo">EP</div>
+    <div>English Pathway <small>Student & Teacher Platform</small></div>
+  </div>
+  <nav class="topnav">
+    <button class="active" data-page="home">🏠 Home</button>
+    <button data-page="library">📚 Library</button>
+    <button data-page="student">✏️ Practice & Tasks</button>
+    <button data-page="progress">📊 Progress</button>
+    <button data-page="teacher" class="role-badge" id="teacherModeBtn">👨‍🏫 Teacher Studio</button>
+  </nav>
+</header>
+
+<div class="shell">
+  <aside class="side">
+    <div class="sidecard">
+      <div class="side-title">Main Navigation</div>
+      <a class="navitem active" data-page="home"><span class="ico">⌂</span>Dashboard</a>
+      <a class="navitem" data-page="grammar"><span class="ico">✎</span>Grammar</a>
+      <a class="navitem" data-page="vocabulary"><span class="ico">▦</span>Vocabulary</a>
+      <a class="navitem" data-page="listening"><span class="ico">♫</span>Listening</a>
+      <a class="navitem" data-page="reading"><span class="ico">▤</span>Reading</a>
+      <a class="navitem" data-page="speaking"><span class="ico">◉</span>Speaking</a>
+      <a class="navitem" data-page="writing"><span class="ico">✉</span>Writing Task</a>
+      <div class="side-title">Workspaces</div>
+      <a class="navitem" data-page="student"><span class="ico">📝</span>My Activities</a>
+      <a class="navitem" data-page="teacher"><span class="ico">⚙️</span>Teacher Area</a>
+      <a class="navitem" data-page="progress"><span class="ico">▥</span>My Progress</a>
+
+      <div class="side-note">
+        <strong>Daily Target:</strong> 15 mins practice.<br>
+        Current level: <span id="activeLevelBadge" class="level-label" style="margin-top:4px">A1</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main" id="app"></main>
+</div>
+
+<footer class="ep-footer">English Pathway · Learning resources A1–C1 · This version saves practice data in this browser only. It does not yet synchronise data between devices.</footer>
+
+<!-- Modal Popup Container -->
+<div class="modal-back" id="modal">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <div class="crumb" id="modalCrumb"></div>
+        <h2 id="modalTitle" style="margin:0;color:var(--navy)"></h2>
+      </div>
+      <button class="close" onclick="closeModal()">✕</button>
+    </div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
